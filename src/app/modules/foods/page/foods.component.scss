@@ -1,7 +1,9 @@
-
-
 .jumbotron{
 background-color: #e0da7199;
+}
+
+.col-md-6{
+  left: 80px
 }
 
 h1 {
@@ -14,7 +16,32 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+h2{
+  font-size: 23px;
+  text-align: left;
+}
+
+.best{
+  margin-top:50px;
+}
+
+h3{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+}
+p{
+  font-size: 19 px;
+}
+
+u{
+  text-decoration: none;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .btn-primary {
+      margin-top: 20px;
       color: #fff;
       background-color: #cc2d2d;
       border-color: #007bff00;
@@ -29,6 +56,12 @@ h1 {
     margin-right: 90px;
     margin-left: 90px;
     text-align: left;
+}
+
+.photo{
+  width:400px;
+  height: 400px;
+
 }
 
 .default-theme .mat-drawer-container {
