@@ -10,7 +10,8 @@ export class ContentLayoutComponent implements OnInit {
   navigation = [
     {link: '/home', title: 'Home'},
     {link: '/foods', title: 'Foods'},
-    {link: '/drinks', title: 'Drinks'}
+    {link: '/drinks', title: 'Drinks'},
+    {link: '/contact', title: 'Contact'}
   ];
   logo = ('../../assets/logo.png');
   theme = 'default-theme';
