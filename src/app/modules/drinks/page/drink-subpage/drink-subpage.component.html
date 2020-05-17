@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 id="title">{{ drink?.strDrink }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>Updated: {{ drink?.dateModified }} | {{ drink?.strAlcoholic }} | {{  drink?.strCategory }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img class="drinkPic" src="{{ drink?.strDrinkThumb }}" alt="drink">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h1>Ingredients</h1>
+      <hr>
+      <p><span class="ingredient">{{ drink?.strIngredient1 }} </span><span
+        class="measure">{{ drink?.strMeasure1 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient2 }} </span><span
+        class="measure">{{ drink?.strMeasure2 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient3 }} </span><span
+        class="measure">{{ drink?.strMeasure3 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient4 }} </span><span
+        class="measure">{{ drink?.strMeasure4 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient5 }} </span><span
+        class="measure">{{ drink?.strMeasure5 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient6 }} </span><span
+        class="measure">{{ drink?.strMeasure6 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient7 }} </span><span
+        class="measure">{{ drink?.strMeasure7 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient8 }} </span><span
+        class="measure">{{ drink?.strMeasure8 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient9 }} </span><span
+        class="measure">{{ drink?.strMeasure9 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient10 }} </span><span
+        class="measure">{{ drink?.strMeasure10 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient11 }} </span><span
+        class="measure">{{ drink?.strMeasure11 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient12 }} </span><span
+        class="measure">{{ drink?.strMeasure12 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient13 }} </span><span
+        class="measure">{{ drink?.strMeasure13 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient14 }} </span><span
+        class="measure">{{ drink?.strMeasure14 }}</span></p>
+      <p><span class="ingredient">{{ drink?.strIngredient15 }} </span><span
+        class="measure">{{ drink?.strMeasure15 }}</span></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h1>Instructions</h1>
+      <hr>
+      <p>{{ drink?.strInstructions }}</p>
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 20px">
+    <div class="col">
+      <h1>Glass</h1>
+      <hr>
+      <p>{{ drink?.strGlass }}</p>
+    </div>
+  </div>
+<!--  <div class="row">-->
+<!--    <div class="col text-center">-->
+<!--      <button mat-raised-button color="primary">Add to favourites</button>-->
+<!--    </div>-->
+<!--  </div>-->
+</div>
