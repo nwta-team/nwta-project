@@ -20,8 +20,8 @@
     </div>
   </div>
   <div class="row randomDrinks justify-content-center">
-    <div class="col-12 col-md-3" *ngFor="let drink of randomThreeDrinks">
-      <a href="{{ drink.idDrink }}">
+    <div class="col-12 col-md-3 text-center" *ngFor="let drink of randomThreeDrinks">
+      <a [routerLink]="['/drink', drink.idDrink]">
       <img class="randomDrinkPic" src="{{ drink.strDrinkThumb }}" alt="random drink">
       </a>
       <p class="category">{{ drink.strCategory }}</p>

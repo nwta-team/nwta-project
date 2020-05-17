@@ -16,4 +16,9 @@ export class CoctailApiService {
     const randomDrinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
     return this.http.get<Drinks>(randomDrinkUrl);
   }
+
+  getDrinkById(id): Observable<Drinks> {
+    const randomDrinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + id;
+    return this.http.get<Drinks>(randomDrinkUrl);
+  }
 }

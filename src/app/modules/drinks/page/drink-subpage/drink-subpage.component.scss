@@ -1,0 +1,56 @@
+@import 'src/styles-variables.scss';
+
+.container {
+  max-width: 700px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: #ebebeb;
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    margin: 0;
+    align-items: center;
+    max-width: 100%;
+  }
+
+}
+
+#title {
+  color: brown;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-family: Georgia, serif;
+  line-height: 50px;
+}
+
+.drinkPic {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.ingredient {
+}
+
+.measure {
+  font-size: 15px;
+  color: brown;
+  font-style: italic;
+}
+
+hr {
+  border: 1px dashed brown;
+}

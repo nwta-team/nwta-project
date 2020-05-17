@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
+import { DrinkSubpageComponent } from './modules/drinks/page/drink-subpage/drink-subpage.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,11 @@ const routes: Routes = [
       {
         path: 'drinks',
         loadChildren: () => import('./modules/drinks/drinks.module').then(m => m.DrinksModule)
+      },
+      {
+        path: 'drink/:id',
+        loadChildren: () => import('./modules/drinks/drinks.module').then(m => m.DrinksModule),
+        component: DrinkSubpageComponent
       },
       {
         path: 'contact',
