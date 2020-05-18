@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: FoodsComponent,
   },
-  { path: 'random', component: RandomPageComponent}
+  { path: 'random-meal', component: RandomPageComponent}
 ];
 
 @NgModule({
