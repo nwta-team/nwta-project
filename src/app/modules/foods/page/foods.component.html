@@ -23,7 +23,7 @@
       <h2 class="featurette-heading">{{ meal.strMeal }} </h2>
       <!--<p class="lead">here is our idea for a meal. what do you think about that? </p><-->
       <p class ="lead">do you want to see the recipe? click the button!</p>
-      <p><a class="btn btn-primary btn-lg" routerLink="random-meal" role="button">Recipe &raquo;</a></p>
+      <p><a class="btn btn-primary btn-lg" [routerLink]="['/recipe', meal.idMeal]" role="button">Recipe &raquo;</a></p>
 
     </div>
     <div class="col-12 col-md-5">

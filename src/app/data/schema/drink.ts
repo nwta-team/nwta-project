@@ -8,12 +8,14 @@ export interface Drink {
   strTags?: any;
   strVideo?: any;
   strCategory: string;
+  strAlcoholic: any;
   strIBA?: any;
+  strDrinkThumb: any;
+  strGlass: any;
   strInstructions: string;
   strInstructionsES?: any;
   strInstructionsDE: string;
   strInstructionsFR?: any;
-  strMealThumb: string;
   strIngredient1: any;
   strIngredient2: any;
   strIngredient3: any;
