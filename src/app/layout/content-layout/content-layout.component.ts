@@ -11,6 +11,7 @@ export class ContentLayoutComponent implements OnInit {
     {link: '/home', title: 'Home'},
     {link: '/foods', title: 'Foods'},
     {link: '/drinks', title: 'Drinks'},
+    {link: '/profile', title: 'Profile'},
     {link: '/contact', title: 'Contact'}
   ];
   logo = ('../../assets/logo.png');

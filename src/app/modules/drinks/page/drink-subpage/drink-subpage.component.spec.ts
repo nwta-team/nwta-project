@@ -8,9 +8,9 @@ describe('DrinkSubpageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DrinkSubpageComponent ]
+      declarations: [DrinkSubpageComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

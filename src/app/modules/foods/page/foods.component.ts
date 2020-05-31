@@ -9,7 +9,8 @@ import { MealApiService } from '../../../data/service/meal-api.service';
 export class FoodsComponent implements OnInit {
   randomMeal = [];
 
-  constructor(private mealApiService: MealApiService) { }
+  constructor(private mealApiService: MealApiService) {
+  }
 
   ngOnInit(): void {
     this.getRandomMeal();
