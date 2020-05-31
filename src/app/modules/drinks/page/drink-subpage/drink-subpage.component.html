@@ -11,7 +11,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <img class="drinkPic" src="{{ drink.strDrinkThumb }}" alt="drink">
+      <img class="drinkPic" src="{{ drink?.strDrinkThumb }}" alt="drink">
     </div>
   </div>
   <div class="row">
@@ -64,9 +64,9 @@
       <p>{{ drink?.strGlass }}</p>
     </div>
   </div>
-<!--  <div class="row">-->
-<!--    <div class="col text-center">-->
-<!--      <button mat-raised-button color="primary">Add to favourites</button>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div class="row">
+    <div class="col text-center">
+      <button mat-raised-button (click)="addDrinkToFavourites()" color="primary">Add to favourites</button>
+    </div>
+  </div>
 </div>

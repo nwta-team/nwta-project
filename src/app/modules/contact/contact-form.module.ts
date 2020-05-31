@@ -12,4 +12,5 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactFormRoutingModule
   ]
 })
-export class ContactFormModule { }
+export class ContactFormModule {
+}

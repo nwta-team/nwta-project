@@ -5,7 +5,6 @@ import { FoodsRoutingModule } from './foods-routing.module';
 import { RecipeComponent } from './recipe/recipe.component';
 
 
-
 @NgModule({
   declarations: [FoodsComponent, RecipeComponent],
   imports: [
@@ -13,4 +12,5 @@ import { RecipeComponent } from './recipe/recipe.component';
     FoodsRoutingModule
   ]
 })
-export class FoodsModule { }
+export class FoodsModule {
+}

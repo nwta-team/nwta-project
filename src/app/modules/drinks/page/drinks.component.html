@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col  p-3">
+    <div class="col p-3 text-center">
       <img class="drinkLogo" src="assets/pictures/drink_icon.png" alt="Drink logo">
     </div>
   </div>
@@ -22,7 +22,7 @@
   <div class="row randomDrinks justify-content-center">
     <div class="col-12 col-md-3 text-center" *ngFor="let drink of randomThreeDrinks">
       <a [routerLink]="['/drink', drink.idDrink]">
-      <img class="randomDrinkPic" src="{{ drink.strDrinkThumb }}" alt="random drink">
+        <img class="randomDrinkPic" src="{{ drink.strDrinkThumb }}" alt="random drink">
       </a>
       <p class="category">{{ drink.strCategory }}</p>
       <h2>{{ drink.strDrink }}</h2>

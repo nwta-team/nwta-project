@@ -6,7 +6,6 @@ import { DrinkSubpageComponent } from './page/drink-subpage/drink-subpage.compon
 import { SharedModule } from '../../shared/shared.module';
 
 
-
 @NgModule({
   declarations: [DrinksComponent, DrinkSubpageComponent],
   imports: [
@@ -15,4 +14,5 @@ import { SharedModule } from '../../shared/shared.module';
     SharedModule
   ]
 })
-export class DrinksModule { }
+export class DrinksModule {
+}

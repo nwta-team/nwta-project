@@ -10,11 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RecipeComponent implements OnInit {
   meal: Meal;
-  constructor(private mealApiService: MealApiService, private route: ActivatedRoute) { }
+
+  constructor(private mealApiService: MealApiService, private route: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
     this.getMeal();
   }
+
   getMeal() {
     const id = this.getMealId();
     this.mealApiService.getMealById(id).subscribe(meal => {
