@@ -10,4 +10,7 @@ export class FirestoreService {
 
   addDrinksToFavourites(idDrink: string) {
   }
+
+  addMealsToFavourites(idMeal: string) {
+  }
 }

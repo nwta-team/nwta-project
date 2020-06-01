@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Meal } from 'src/app/data/schema/meal';
 import { MealApiService } from 'src/app/data/service/meal-api.service';
 import { ActivatedRoute } from '@angular/router';
+import { FirestoreService } from '../../../data/service/firestore.service';
 
 @Component({
   selector: 'app-recipe',
@@ -11,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class RecipeComponent implements OnInit {
   meal: Meal;
 
-  constructor(private mealApiService: MealApiService, private route: ActivatedRoute) {
+  constructor(private mealApiService: MealApiService, private route: ActivatedRoute, private firestoreService: FirestoreService) {
   }
 
   ngOnInit(): void {
@@ -32,5 +33,9 @@ export class RecipeComponent implements OnInit {
       id = params.id;
     });
     return id;
+  }
+
+  addMealToFavourites() {
+    this.firestoreService.addMealsToFavourites(this.meal.idMeal);
   }
 }

@@ -2,11 +2,11 @@
   <div class="row">
     <div class="col-md-12 name">
       <hr class="featurette-divider">
-      <h1>{{ meal.strMeal }}</h1>
+      <h1>{{ meal?.strMeal }}</h1>
       <hr class="featurette-divider">
     </div>
     <div class="col-md-7">
-      <img clas="mealPhoto" src="{{ meal.strMealThumb }}">
+      <img clas="mealPhoto" src="{{ meal?.strMealThumb }}">
     </div>
     <div class="col-md-5 ingredient">
       <h2>Igredients:</h2>
@@ -60,7 +60,7 @@
       <hr class="instr">
     </div>
     <div class="col-md-12">
-      <p>Do you like this meal? <a class="btn btn-primary btn-danger">Add to favorite!<span
+      <p>Do you like this meal? <a (click)="addMealToFavourites()" class="btn btn-primary btn-danger">Add to favorite!<span
         class="glyphicon glyphicon-heart"></span></a></p>
       <hr class="end">
     </div>
