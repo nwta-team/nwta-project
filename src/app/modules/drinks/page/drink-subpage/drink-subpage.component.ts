@@ -38,6 +38,6 @@ export class DrinkSubpageComponent implements OnInit {
   }
 
   addDrinkToFavourites() {
-    this.firestoreService.addDrinksToFavourites();
+    this.firestoreService.addDrinksToFavourites(this.drink.idDrink);
   }
 }

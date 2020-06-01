@@ -8,6 +8,6 @@ export class FirestoreService {
   constructor() {
   }
 
-  addDrinksToFavourites() {
+  addDrinksToFavourites(idDrink: string) {
   }
 }
