@@ -3,6 +3,7 @@ import { Meal } from 'src/app/data/schema/meal';
 import { MealApiService } from 'src/app/data/service/meal-api.service';
 import { ActivatedRoute } from '@angular/router';
 import { FirestoreService } from '../../../data/service/firestore.service';
+import { AuthService } from 'src/app/data/service/auth.service';
 
 @Component({
   selector: 'app-recipe',
@@ -10,13 +11,19 @@ import { FirestoreService } from '../../../data/service/firestore.service';
   styleUrls: ['./recipe.component.scss']
 })
 export class RecipeComponent implements OnInit {
+  
   meal: Meal;
+  currentUser : firebase.User;
 
-  constructor(private mealApiService: MealApiService, private route: ActivatedRoute, private firestoreService: FirestoreService) {
+  constructor(private mealApiService: MealApiService, private route: ActivatedRoute,
+     private firestoreService: FirestoreService, public auth: AuthService) {
   }
 
   ngOnInit(): void {
     this.getMeal();
+    this.auth.getUserState().subscribe( user => {
+      this.currentUser = user;
+    })
   }
 
   getMeal() {
@@ -36,6 +43,6 @@ export class RecipeComponent implements OnInit {
   }
 
   addMealToFavourites() {
-    this.firestoreService.addMealsToFavourites(this.meal.idMeal);
+    this.firestoreService.addMealsToFavourites(this.meal.idMeal, this.currentUser.uid, this.meal.strMeal);
   }
 }

@@ -60,8 +60,16 @@
       <hr class="instr">
     </div>
     <div class="col-md-12">
-      <p>Do you like this meal? <a (click)="addMealToFavourites()" class="btn btn-primary btn-danger">Add to favorite!<span
-        class="glyphicon glyphicon-heart"></span></a></p>
+      <p>Do you like this meal? 
+        <span  
+        matTooltip="For this feature you need to be logged in" 
+        [matTooltipDisabled]="this.currentUser">
+          <button 
+          (click)="addMealToFavourites()" 
+          class="btn btn-primary btn-danger" 
+          [disabled]="this.currentUser == null">
+            Add to favorite!<span class="glyphicon glyphicon-heart"></span>
+          </button></span></p>
       <hr class="end">
     </div>
     <div class="w-100"></div>
