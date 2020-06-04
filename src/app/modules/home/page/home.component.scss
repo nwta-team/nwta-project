@@ -2,7 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 
+.content{
+  width: 100%;
+}
 
 #content{
     width: 100%;
@@ -26,6 +30,7 @@
         font-family: 'Shadows Into Light', cursive;
     }
 }
+
 #grey-panel{
     width: 50vw;
     margin: 20px auto;
@@ -49,22 +54,12 @@
 
 #second-panel{
     width: 100%;
-    height: 155vh;
+    height: 115vh;
     background: url("../../../../assets/home-page/delicous-smoothie.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-repeat: repeat;
+    background-size: cover;
 }
 
-.footer{
-    width: 100%;
-    height: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1vw;
-    color: white;
-    background-color: rgb(62, 62, 65);
-}
 @media (max-width: 1024px) {
     #content{
         width: 100%;
@@ -74,7 +69,7 @@
         width: 100%;
         height: 44vh;
     }
-  }
+}
 
 @media (max-width: 600px) {
     #content{
@@ -85,9 +80,10 @@
         width: 100%;
         height: 35vh;
     }
-  }
+}
 
-  @media (max-width: 360px) {
+
+@media (max-width: 360px) {
     #content{
         width: 100%;
         height: 35vh;
@@ -96,4 +92,77 @@
         width: 100%;
         height: 35vh;
     }
+}
+
+
+  
+.top-3-recipes{
+    width: 100%;
+    min-height: 80vh;
+    background-color: rgb(227, 228, 199);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2vw;
+    
+    .dish-card{      
+      display: flex;
+      flex-direction: column;
+    }
+    .btn{
+      margin: 2vw;
+      color: white;
+    }
+    img{  
+      margin: 15px;    
+      width: 250px;
+      height: 260px;
+      border: 10px;
+      border-color: black;
+    }
+    
+  
+
+    
+}
+.modal{
+  .modal-content{
+      text-align: center;
+      width: 900px;
+      .modal-header{
+          font-family: 'Roboto', sans-serif;;
+          font-size: 5vw;
+      }
+      .modal-body{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .ingredients{
+          justify-content: left;
+        }
+        .full-image{
+          img{
+            height: 300px;
+            width: 300px;
+          }
+        }
+      }
   }
+}
+
+  
+footer{
+  width: 100%;
+  height: 5vh;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+  color: white;
+  background-color: rgb(62, 62, 65);
+} 
+    
+  
