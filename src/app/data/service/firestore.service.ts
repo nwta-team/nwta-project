@@ -57,4 +57,14 @@ export class FirestoreService {
   {
     return this.fireStore.collection<FavMeal>("favMeals", ref => ref.where('userid', "==", userID)).valueChanges();
   }
+
+  addEmailToNewsletter(email: string)
+  {
+    
+  }
+
+  removeEmailFromNewsletter(email: string)
+  {
+
+  }
 }
