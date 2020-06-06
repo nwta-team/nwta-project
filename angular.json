@@ -122,13 +122,8 @@
               "devServerTarget": "nwta-project:serve:production"
             }
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {}
         }
       }
-    }
-  },
+    }},
   "defaultProject": "nwta-project"
 }
