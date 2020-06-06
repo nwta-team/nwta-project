@@ -1,134 +1,69 @@
-<main role="main">
+<div role="main">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <div class="jumbotron">
     <div class="container text-center">
-      <h1 class="display-3">Jedzenie na każdą okazję!</h1>
-      <p>Tutaj znajdziesz rozmaite przepisy na każdy posiłek! Zobacz co przygotowaliśmy dla Ciebie.</p>
-      <p><a class="btn btn-primary btn-lg" routerLink="random" role="button">Zobacz posiłek &raquo;</a></p>
+      <h1 class="display-3">Meals For Ever Occasion</h1>
+      <p>Here you'll find various recipes for every meal! See what we have prepared for you!</p>
+      <!--<p><a class="btn btn-primary btn-lg" routerLink="random-meal" role="button">See random meal &raquo;</a></p>-->
     </div>
   </div>
 
-  <h3>Najlepsze przepisy!</h3>
+  <h3>Five Random Recipes!</h3>
 
-  <div id="top">
-  <hr class="best">
+  <div class="container best">
+    <div id="top ">
 
-  <div class="row featurette">
-    <div class="col-md-6">
-      <h2 class="featurette-heading">Posiłek nr 1</h2>
-      <p class="lead">Oto pierwszy pomysł na posiłek. Co o tym myślisz? </p>
-      <u>Składniki:
-        <li>Woda</li>
-        <li>Cukier</li>
-        <li>Drożdże</li>
-        <li>Mąka</li>
-        <li>Sól</li>
-        <li>Oliwa</li>
-        <li>Sos pomidorowy</li>
-        <li>Mozzarella</li>
-        <li>Oregano</li>
-        <li>Bazylia</li>
-        <li>Pieprz</li>
-      </u>
+      <div class="container random">
+        <div class="row featurette randomMeal" *ngFor="let meal of randomMeal">
+          <div class="col-md-12">
+            <hr class="featurette-divider">
+            <div class="row">
+              <div class="col-md-7">
+                <a href="{{ meal.idMeal }}"> </a>
+                <h2 class="featurette-heading">{{ meal.strMeal }} </h2>
+                <!--<p class="lead">here is our idea for a meal. what do you think about that? </p><-->
+                <p class="lead">do you want to see the recipe? click the button!</p>
+                <p><a class="btn btn-primary btn-lg" [routerLink]="['/recipe', meal.idMeal]" role="button">Recipe
+                  &raquo;</a></p>
+
+              </div>
+              <div class="col-12 col-md-5">
+                <img class="randomMealPhoto" src="{{ meal.strMealThumb }}" alt="h4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
+
+      <div class="row featurette randomMeal" *ngFor="let meal of randomMeal">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">second meal</h2>
+          <p class="lead"> an interesting dish for every day. maybe you are tempted?</p>
+            <a class="second meal" href="{{ meal.idMeal }}"> </a>
+            <h4>{{ meal.strMeal }} </h4>
+        </div>
+        <div class="col-md-5 text-center">
+          <img class="randomMealPhoto" src="{{ meal.strMealThumb }}" alt="h4">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" *ngFor="let meal of randomMeal">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">third meal</h2>
+          <p class="lead">maybe this dish will interest you. </p>
+          <a href="{{ meal.idMeal }}"> </a>
+          <h4>{{ meal.strMeal }} </h4>
+        </div>
+        <div class="col-md-5">
+          <img class="randomMealPhoto" src="{{ meal.strMealThumb }}" alt="h4">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+    -->
+      <hr class="featurette-divider">
     </div>
-    <div class="col-md-5">
-      <img class="photo" src="../assets/food-page/pizza.jpg" alt="Pizza">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-6">
-      <h2 class="featurette-heading">Posiłek nr 2</h2>
-      <p class="lead">Oto nasza druga propozycja. Łatwe w przygotowaniu. </p>
-      <u>Składniki:
-        <li>Mąka</li>
-        <li>Cukier</li>
-        <li>Jajka</li>
-        <li>Mleko</li>
-      </u>
-    </div>
-    <div class="col-md-5">
-      <img class="photo" src="../assets/food-page/mandazi.jpg" alt="Mandazi">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-6">
-      <h2 class="featurette-heading">Posiłek nr 3</h2>
-      <p class="lead">Tutaj można poszaleć z przyprawami. </p>
-      <u>Składniki:
-        <li>Oliwa</li>
-        <li>Cebula</li>
-        <li>Marchewka</li>
-        <li>Jagnięcina</li>
-        <li>Czosnek</li>
-        <li>Kminek</li>
-        <li>Imbir</li>
-        <li>Szafran</li>
-        <li>Cynamon</li>
-        <li>Miód</li>
-        <li>Morela</li>
-        <li>Kostki rosołowe</li>
-        <li>Dynia piżmowa</li>
-        <li>Kuskus</li>
-        <li>Pietruszka</li>
-      </u>
-    </div>
-    <div class="col-md-5">
-      <img class="photo" src="../assets/food-page/tagine.jpg" alt="Tagine z jagnięciną">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-6">
-      <h2 class="featurette-heading">Posiłek nr 4</h2>
-      <p class="lead">A może coś dla wegatarianinów?</p>
-      <u>Składniki:
-        <li>Oliwa</li>
-        <li>Cebula</li>
-        <li>Seler</li>
-        <li>Por</li>
-        <li>Ziemniaki</li>
-        <li>Masło</li>
-        <li>Bulion warzywny</li>
-        <li>Brokuł</li>
-      </u>
-    </div>
-    <div class="col-md-5">
-      <img class="photo" src="../assets/food-page/zupa brokułowa.jpg" alt="Zupa brokułowa">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <div class="row featurette">
-    <div class="col-md-6">
-      <h2 class="featurette-heading">Posiłek nr 5</h2>
-      <p class="lead">Coś na słodko. </p>
-      <u>Składniki:
-        <li>Drożdże</li>
-        <li>Woda</li>
-        <li>Cukier</li>
-        <li>Jajka</li>
-        <li>Sól</li>
-        <li>Margaryna</li>
-        <li>Mąka</li>
-        <li>Olej rzepakowy</li>
-        <li>Mleko</li>
-        <li>Wanilia</li>
-        <li>Masło</li>
-      </u>
-    </div>
-    <div class="col-md-5">
-      <img class="photo" src="../assets/food-page/pączki.jpg" alt="Pączki">
-    </div>
-  </div>
-
-  <hr class="featurette-divider">
-
   </div>

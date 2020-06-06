@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 name">
+      <hr class="featurette-divider">
+      <h1>{{ meal?.strMeal }}</h1>
+      <hr class="featurette-divider">
+    </div>
+    <div class="col-md-7">
+      <img clas="mealPhoto" src="{{ meal?.strMealThumb }}">
+    </div>
+    <div class="col-md-5 ingredient">
+      <h2>Igredients:</h2>
+      <div class="col-md-5 ingredients">
+        <p><span class="measure">{{ meal?.strMeasure1 }}</span><span
+          class="ingredient">{{ meal?.strIngredient1 }} </span></p>
+        <p><span class="measure">{{ meal?.strMeasure2 }} </span><span
+          class="ingredient">{{ meal?.strIngredient2 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure3 }} </span><span
+          class="ingredient">{{ meal?.strIngredient3 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure4 }} </span><span
+          class="ingredient">{{ meal?.strIngredient4 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure5 }} </span><span
+          class="ingredient">{{ meal?.strIngredient5 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure6 }} </span><span
+          class="ingredient">{{ meal?.strIngredient6 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure7 }} </span><span
+          class="ingredient">{{ meal?.strIngredient7 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure8 }} </span><span
+          class="ingredient">{{ meal?.strIngredient8 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure9 }} </span><span
+          class="ingredient">{{ meal?.strIngredient9 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure10 }} </span><span
+          class="ingredient">{{ meal?.strIngredient10 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure11 }} </span><span
+          class="ingredient">{{ meal?.strIngredient11 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure12 }} </span><span
+          class="ingredient">{{ meal?.strIngredient12 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure13 }} </span><span
+          class="ingredient">{{ meal?.strIngredient13 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure14 }} </span><span
+          class="ingredient">{{ meal?.strIngredient14 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure15 }} </span><span
+          class="ingredient">{{ meal?.strIngredient15 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure16 }} </span><span
+          class="ingredient">{{ meal?.strIngredient16 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure17 }} </span><span
+          class="ingredient">{{ meal?.strIngredient17 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure18 }} </span><span
+          class="ingredient">{{ meal?.strIngredient18 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure19 }} </span><span
+          class="ingredient">{{ meal?.strIngredient19 }}</span></p>
+        <p><span class="measure">{{ meal?.strMeasure20 }} </span><span
+          class="ingredient">{{ meal?.strIngredient20 }}</span></p>
+      </div>
+    </div>
+    <div class="col instruction">
+      <hr class="featurette-divider">
+      <h3>Instruction:</h3>
+      <p class="instruction">{{ meal?.strInstructions }}</p>
+      <hr class="instr">
+    </div>
+    <div class="col-md-12">
+      <p>Do you like this meal? 
+        <span  
+        matTooltip="For this feature you need to be logged in" 
+        [matTooltipDisabled]="this.currentUser">
+          <button 
+          (click)="addMealToFavourites()" 
+          class="btn btn-primary btn-danger" 
+          [disabled]="this.currentUser == null">
+            Add to favorite!<span class="glyphicon glyphicon-heart"></span>
+          </button></span></p>
+      <hr class="end">
+    </div>
+    <div class="w-100"></div>
+  </div>
+
+
