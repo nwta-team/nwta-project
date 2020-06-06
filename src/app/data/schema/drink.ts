@@ -8,18 +8,18 @@ export interface Drink {
   strTags?: any;
   strVideo?: any;
   strCategory: string;
-  strAlcoholic: any;
   strIBA?: any;
-  strDrinkThumb: any;
-  strGlass: any;
+  strAlcoholic: string;
+  strGlass: string;
   strInstructions: string;
   strInstructionsES?: any;
   strInstructionsDE: string;
   strInstructionsFR?: any;
-  strIngredient1: any;
-  strIngredient2: any;
-  strIngredient3: any;
-  strIngredient4: any;
+  strDrinkThumb: string;
+  strIngredient1: string;
+  strIngredient2: string;
+  strIngredient3: string;
+  strIngredient4: string;
   strIngredient5?: any;
   strIngredient6?: any;
   strIngredient7?: any;
@@ -52,11 +52,5 @@ export interface Drink {
 
 export interface Drinks {
   drinks: Drink[];
-}
-
-export interface FavDrink{
-  userid: string;
-  drinkid: string;
-  drinkname : string
 }
 
