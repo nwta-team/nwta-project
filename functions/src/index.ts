@@ -15,7 +15,7 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-exports.sendMail = functions.https.onRequest((req, res) => {
+exports.sendMail = functions.https.onRequest((req: any, res: any) => {
     cors(req, res, () => {
       
         // getting dest email by query string
@@ -32,7 +32,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         };
   
         // returning result
-        return transporter.sendMail(mailOptions, (erro, info) => {
+        return transporter.sendMail(mailOptions, (erro:any, info:any) => {
             if(erro){
                 return res.send(erro.toString());
             }
