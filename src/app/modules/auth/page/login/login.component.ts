@@ -3,19 +3,19 @@ import { AuthProvider, Theme } from 'ngx-auth-firebaseui';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
 
-    providers = AuthProvider;
-    themes = Theme;
+  providers = AuthProvider;
+  themes = Theme;
 
-    constructor(private router: Router) {
-    }
+  constructor(private router: Router) {
+  }
 
-    redirectToProfile() {
-        this.router.navigate(['profile']);
-    }
+  redirectToProfile() {
+    this.router.navigate(['profile']);
+  }
 }
