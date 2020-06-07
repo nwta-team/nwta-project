@@ -61,13 +61,15 @@ export class FirestoreService {
 
   addEmailToNewsletter(email: string)
   {
-    return this.fireStore.collection("newsletter").doc("0").update({
+    this.fireStore.collection("newsletter").doc("0").update({
       emails : firebase.firestore.FieldValue.arrayUnion(email)
     }).then(() => this.snackBar.open('Your email was added to newsletter!', 'Close'), () => this.snackBar.open('Error occurred while adding your email! Try again later.', 'Close'));
   }
 
   removeEmailFromNewsletter(email: string)
   {
-    
+    this.fireStore.collection("newsletter").doc("0").update({
+      emails : firebase.firestore.FieldValue.arrayRemove(email)
+    }).then(() => this.snackBar.open('Your email was successfully removed from newsletter!', 'Close'), () => this.snackBar.open('Error occurred while removing your email! Try again later.', 'Close'));
   }
 }
