@@ -6,6 +6,7 @@ import { AuthService } from './auth.service';
 import { Observable } from 'rxjs';
 import { FavDrink } from '../schema/drink';
 import { FavMeal } from '../schema/meal';
+import * as firebase from 'firebase';
 
 
 @Injectable({
@@ -60,11 +61,13 @@ export class FirestoreService {
 
   addEmailToNewsletter(email: string)
   {
-    
+    return this.fireStore.collection("newsletter").doc("0").update({
+      emails : firebase.firestore.FieldValue.arrayUnion(email)
+    }).then(() => this.snackBar.open('Your email was added to newsletter!', 'Close'), () => this.snackBar.open('Error occurred while adding your email! Try again later.', 'Close'));
   }
 
   removeEmailFromNewsletter(email: string)
   {
-
+    
   }
 }
