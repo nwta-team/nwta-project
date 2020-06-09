@@ -1,20 +1,17 @@
+<div class="container foods">
 <div role="main">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <div class="jumbotron">
     <div class="container text-center">
-      <h1 class="display-3">Meals For Ever Occasion</h1>
-      <p>Here you'll find various recipes for every meal! See what we have prepared for you!</p>
+      <h1 class="display-3">Meals For Every One</h1>
+      <p class="welcome">
+        Hello! Do you want to feel new flavors? Improve your cooking skills or impress your friends? Here you will find fascinating recipes. See what we have prepared for you!</p>
       <!--<p><a class="btn btn-primary btn-lg" routerLink="random-meal" role="button">See random meal &raquo;</a></p>-->
     </div>
   </div>
 
   <h3>Five Random Recipes!</h3>
-
-  <div class="container best">
-    <div id="top ">
-
-      <div class="container random">
-        <div class="row featurette randomMeal" *ngFor="let meal of randomMeal">
+        <div class="row randomMeal" *ngFor="let meal of randomMeal">
           <div class="col-md-12">
             <hr class="featurette-divider">
             <div class="row">
@@ -23,47 +20,15 @@
                 <h2 class="featurette-heading">{{ meal.strMeal }} </h2>
                 <!--<p class="lead">here is our idea for a meal. what do you think about that? </p><-->
                 <p class="lead">do you want to see the recipe? click the button!</p>
-                <p><a class="btn btn-primary btn-lg" [routerLink]="['/recipe', meal.idMeal]" role="button">Recipe
+                <p class="recipe"><a class="btn btn-primary btn-lg" [routerLink]="['/recipe', meal.idMeal]" role="button">Recipe
                   &raquo;</a></p>
-
               </div>
-              <div class="col-12 col-md-5">
+              <div class="col-md-5 randomPhoto">
                 <img class="randomMealPhoto" src="{{ meal.strMealThumb }}" alt="h4">
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!--
-
-      <div class="row featurette randomMeal" *ngFor="let meal of randomMeal">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">second meal</h2>
-          <p class="lead"> an interesting dish for every day. maybe you are tempted?</p>
-            <a class="second meal" href="{{ meal.idMeal }}"> </a>
-            <h4>{{ meal.strMeal }} </h4>
-        </div>
-        <div class="col-md-5 text-center">
-          <img class="randomMealPhoto" src="{{ meal.strMealThumb }}" alt="h4">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette" *ngFor="let meal of randomMeal">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">third meal</h2>
-          <p class="lead">maybe this dish will interest you. </p>
-          <a href="{{ meal.idMeal }}"> </a>
-          <h4>{{ meal.strMeal }} </h4>
-        </div>
-        <div class="col-md-5">
-          <img class="randomMealPhoto" src="{{ meal.strMealThumb }}" alt="h4">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-    -->
-      <hr class="featurette-divider">
+     <hr class="featurette-divider">
     </div>
   </div>
