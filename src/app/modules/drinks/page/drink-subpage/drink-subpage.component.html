@@ -54,22 +54,22 @@
     <div class="col">
       <h1>Instructions</h1>
       <hr>
-      <p>{{ drink?.strInstructions }}</p>
+      <p class="instructions">{{ drink?.strInstructions }}</p>
     </div>
   </div>
   <div class="row" style="margin-bottom: 20px">
     <div class="col">
       <h1>Glass</h1>
       <hr>
-      <p>{{ drink?.strGlass }}</p>
+      <p class="glass">{{ drink?.strGlass }}</p>
     </div>
   </div>
   <div class="row">
     <div class="col text-center" matTooltip="For this feature you need to be logged in" [matTooltipDisabled]="this.currentUser">
-      <button 
-      mat-raised-button 
-      (click)="addDrinkToFavourites()" 
-      color="primary" 
+      <button
+      mat-raised-button
+      (click)="addDrinkToFavourites()"
+      color="primary"
       [disabled]="this.currentUser == null">Add to favourites</button>
     </div>
   </div>

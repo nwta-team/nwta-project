@@ -1,16 +1,18 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
+import { LoginPage } from './login.po';
 
-describe('Home page', () => {
-  let page: AppPage;
+describe('Login page', () => {
+  let page: LoginPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new LoginPage();
+    page.navigateTo();
   });
 
-  it('should display welcome message', () => {
+  it('should render login page', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Tasty food');
+    expect(page.getAuthElement()).toBeDefined();
   });
 
   afterEach(async () => {
