@@ -38,6 +38,22 @@ export class ProfileComponent implements OnInit {
     })
   }
 
+  removeMealFromFavourites(mealid: string)
+  {
+    if(confirm('Are you sure you want to remove this meal from your favourites?'))
+    {
+      this.firestoreService.deleteMealFromFavourites(this.currentUser.uid, mealid)
+    }
+  }
+
+  removeDrinkFromFavourites(drinkid: string)
+  {
+    if(confirm('Are you sure you want to remove this drink from your favourites?'))
+    {
+      this.firestoreService.deleteDrinkFromFavourites(this.currentUser.uid, drinkid)
+    }
+  }
+
   onLogoutClick() {
     this.auth.logout();
   }
