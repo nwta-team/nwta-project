@@ -1,56 +1,74 @@
 <div class="container">
-  <div class="card mt-3" style="max-width: 700px;">
-    <div class="card-header">
-      Sign Up for newsletter!
+  <div class="row">
+    <div class="card mt-3" style="max-width: 700px;">
+      
+
+        <div class="card-header">
+          Sign Up for newsletter!
+        </div>
+
+        <div class="card-body">
+          <p>We will send random recipes to your email, so you can experiment with your cooking skills.</p>
+          <form (ngSubmit)="signForNewsletter(newsletterForm)"
+                #newsletterForm="ngForm"
+                class="p-3 rounded">
+            <fieldset>
+
+              <div class="form-group row">
+                <label class="col-md-2 col-form-label"
+                      for="emailId">Email</label>
+                <div class="col-md-8">
+                  <input class="form-control"
+                        id="emailId"
+                        type="email"
+                        placeholder="Write your email here..."
+                        required
+                        ngModel
+                        name="email"
+                        #emailVar="ngModel"
+                        [ngClass]="{'is-invalid': (emailVar.touched || emailVar.dirty) && !emailVar.valid }" />
+                  <span class="invalid-feedback">
+                    <span *ngIf="emailVar.errors?.required">
+                      Email is required.
+                    </span>
+                    <span *ngIf="emailVar.errors?.email">
+                      Email is invalid.
+                    </span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 offset-md-2">
+                  <button class="btn btn-primary"
+                          type="submit"
+                          style="width:150px"
+                          [disabled]="!newsletterForm.valid">
+                    Sign for newsletter
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="alert alert-danger"
+            *ngIf="errorMessage">{{errorMessage}}
+        </div>
+
+      
+
+      
     </div>
-
-    <div class="card-body">
-      <p>We will send random recipes to your email, so you can experiment with your cooking skills.</p>
-      <form (ngSubmit)="signForNewsletter(newsletterForm)"
-            #newsletterForm="ngForm"
-            class="p-3 rounded">
-        <fieldset>
-
-          <div class="form-group row">
-            <label class="col-md-2 col-form-label"
-                  for="emailId">Email</label>
-            <div class="col-md-8">
-              <input class="form-control"
-                    id="emailId"
-                    type="email"
-                    placeholder="Write your email here..."
-                    required
-                    ngModel
-                    name="email"
-                    #emailVar="ngModel"
-                    [ngClass]="{'is-invalid': (emailVar.touched || emailVar.dirty) && !emailVar.valid }" />
-              <span class="invalid-feedback">
-                <span *ngIf="emailVar.errors?.required">
-                  Email is required.
-                </span>
-                <span *ngIf="emailVar.errors?.email">
-                  Email is invalid.
-                </span>
-              </span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4 offset-md-2">
-              <button class="btn btn-primary"
-                      type="submit"
-                      style="width:150px"
-                      [disabled]="!newsletterForm.valid">
-                Sign for newsletter
-              </button>
-            </div>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-
-    <div class="alert alert-danger"
-        *ngIf="errorMessage">{{errorMessage}}
+    <div class="mx-auto mt-3 col-4 p-3">
+      <p>This work was made as a University project by a group of students.</p>
+      <ul>
+        <li>K.B</li>
+        <li>K.W</li>
+        <li>G.G</li>
+        <li>A.B</li>
+      </ul>
+      <p>If you have any problems with the site or just want to contact us, you can write to this email: <span style="text-decoration:underline;font-weight: bold;">annaagoraaj20@gmail.com</span></p>
     </div>
   </div>
 </div>
