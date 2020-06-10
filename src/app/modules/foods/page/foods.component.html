@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <div class="jumbotron">
     <div class="container text-center">
-      <h1 class="display-3">Meals For Every One</h1>
+      <h1 class="display-3 header">Meals For Every One</h1>
       <p class="welcome">
         Hello! Do you want to feel new flavors? Improve your cooking skills or impress your friends? Here you will find fascinating recipes. See what we have prepared for you!</p>
       <!--<p><a class="btn btn-primary btn-lg" routerLink="random-meal" role="button">See random meal &raquo;</a></p>-->
@@ -20,7 +20,7 @@
                 <h2 class="featurette-heading">{{ meal.strMeal }} </h2>
                 <!--<p class="lead">here is our idea for a meal. what do you think about that? </p><-->
                 <p class="lead">do you want to see the recipe? click the button!</p>
-                <p class="recipe"><a class="btn btn-primary btn-lg" [routerLink]="['/recipe', meal.idMeal]" role="button">Recipe
+                <p class="recipe"><a class="btn btn-primary reciperouter btn-lg" [routerLink]="['/recipe', meal.idMeal]" role="button">Recipe
                   &raquo;</a></p>
               </div>
               <div class="col-md-5 randomPhoto">
