@@ -24,7 +24,7 @@
                   &raquo;</a></p>
               </div>
               <div class="col-md-5 randomPhoto">
-                <img class="randomMealPhoto" src="{{ meal.strMealThumb }}" alt="h4">
+                <img class="randomMealPhoto" style="cursor:pointer;" src="{{ meal.strMealThumb }}" [routerLink]="['/recipe', meal.idMeal]" alt="{{meal.strMeal}}">
               </div>
             </div>
           </div>
