@@ -10,55 +10,69 @@
 
 #content{
     width: 100%;
-    height: 160vh;
-    position: relative;
-    color: black;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white !important;
-    background: url("../../../../assets/home-page/vegetables.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    .title{
-        position: absolute;
-        transform: translate(37vw, 25vw);
-        font-size: 4vw;
-        font-family: 'Pacifico', cursive;
-    }
-    .describe{
-        position: absolute;
-        transform: translate(39vw, 29vw);
-        font-size: 2vw;
-        font-family: 'Shadows Into Light', cursive;
+    padding-bottom: 3vw;
+    img{
+      max-height: auto;
+      max-width: 100vw;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
     }
 }
 
 #grey-panel {
-  width: 50vw;
-  margin: 20px auto;
-  text-align: justify;
-  line-height: 3vw;
-
-  .quotation {
-    font-family: 'PT Serif', serif;
-    text-align: center;
-    letter-spacing: 2px;
-    font-size: 1.5vw;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: dotted;
+  border-bottom: dotted;
+  border-width: 10px;
+  border-color: rgb(197, 98, 80);
+  margin: 2vw 0 2vw 0;
+  div{
+    width: 50vw;
+    align-items: center;
+    line-height: 3vw;
+    .quotation {
+      font-family: 'PT Serif', serif;
+      text-align: center;
+      letter-spacing: 2px;
+      font-size: 1.5vw;
+    }
+    .author {
+      font-family: 'PT Serif', serif;
+      text-align: right;
+      font-weight: bold;
+      color: rgb(97, 93, 93);
+      font-size: 0.9vw;
+    }
   }
 
-  .author {
-    font-family: 'PT Serif', serif;
-    text-align: right;
-    font-weight: bold;
-    color: rgb(97, 93, 93);
-    font-size: 0.9vw;
-  }
+  
 }
 
 #second-panel{
     width: 100%;
-    height: 115vh;
-    background: url("../../../../assets/home-page/delicous-smoothie.png");
-    background-repeat: repeat;
-    background-size: cover;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white !important;
+      img{
+        max-height: auto;
+        max-width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
 }
 
 @media (max-width: 1024px) {
@@ -66,9 +80,29 @@
         width: 100%;
         height: 45vh;
     }
+    #grey-panel{
+      width: 100%;
+      height: 45vh;
+      div{
+        width: 50vw;
+        align-items: center;
+        line-height: 3vw;
+      }
+    }
     #second-panel{
         width: 100%;
         height: 44vh;
+    }
+    .top-3-recipes{
+      width: 30%;
+      height: auto;
+      display: flex;
+      flex-direction: column !important;
+      align-items: center;
+      justify-content: space-between;
+    }
+    footer{
+      font-size: 2vw !important;
     }
 }
 
@@ -77,9 +111,29 @@
         width: 100%;
         height: 35vh;
     }
+    #grey-panel{
+      width: 100%;
+      height: 45vh;
+      div{
+        width: 50vw;
+        align-items: center;
+        line-height: 3vw;
+      }
+    }
     #second-panel{
         width: 100%;
         height: 35vh;
+    }
+    .top-3-recipes{
+      width: 30%;
+      height: auto;
+      display: flex;
+      flex-direction: column !important;
+      align-items: center;
+      justify-content: space-between;
+    }
+    footer{
+      font-size: 2vw !important;
     }
 }
 
@@ -89,14 +143,31 @@
         width: 100%;
         height: 35vh;
     }
+    #grey-panel{
+      width: 100%;
+      height: 45vh;
+      div{
+        width: 50vw;
+        align-items: center;
+        line-height: 3vw;
+      }
+    }
     #second-panel{
         width: 100%;
         height: 35vh;
     }
+    .top-3-recipes{
+      width: 100vw;
+      height: auto;
+      display: flex;
+      flex-direction: column !important;
+      justify-content: space-between;
+    }
+    footer{
+      font-size: 2vw !important;
+    }
 }
 
-
-  
 .top-3-recipes{
     width: 100%;
     min-height: 80vh;
@@ -122,13 +193,10 @@
       height: 260px;
       border: 10px;
       border-color: black;
-    }
-    
-  
-
-    
+    }   
 }
-.modal{
+
+.modal{  
   .modal-content{
       text-align: center;
       width: 900px;
@@ -146,8 +214,8 @@
         }
         .full-image{
           img{
-            height: 300px;
-            width: 300px;
+            height: 20vw;
+            width: 20vw;
           }
         }
       }
