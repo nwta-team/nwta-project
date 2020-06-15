@@ -9,13 +9,13 @@
       <div class="col-md-6 text-center">
         <h2>Favourite Meals</h2>
         <div *ngFor="let meal of favMeals">
-            <p>{{meal.mealname}} - <a class="text-primary" [routerLink]="['/recipe', meal.mealid]">Get to it!</a></p>
+            <p>{{meal.mealname}} - <a class="text-primary" [routerLink]="['/recipe', meal.mealid]">Get to it!</a> - <a class="text-danger removeLink" (click)="this.removeMealFromFavourites(meal.mealid)">Remove it!</a></p>
         </div>
       </div>
       <div class="col-md-6 text-center">
         <h2>Favourite Drinks</h2>
         <div *ngFor="let drink of favDrinks">
-            <p>{{drink.drinkname}} - <a class="text-primary" [routerLink]="['/drink', drink.drinkid]">Get to it!</a></p>
+            <p>{{drink.drinkname}} - <a class="text-primary" [routerLink]="['/drink', drink.drinkid]">Get to it!</a> - <a class="text-danger removeLink" (click)="this.removeDrinkFromFavourites(drink.drinkid)">Remove it!</a></p>
         </div>
       </div>
     </div>

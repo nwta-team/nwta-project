@@ -49,6 +49,30 @@ export class FirestoreService {
     }
   }
 
+  deleteMealFromFavourites(userID: string, mealId: string): void
+  {
+    let query = this.fireStore.collection("favMeals").ref.where('userid' , '==',  userID);
+    query = query.where('mealid' , '==',  mealId);
+    query.get().then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        doc.ref.delete().then(function() {
+          this.snackBar.open('Meal successfully removed from favourites!', 'Close')}, () => this.snackBar.open('Meal unsuccessfully removed from favourites! ', 'Close'));
+        });
+    });
+  }
+
+  deleteDrinkFromFavourites(drinkId: string, userID: string): void
+  {
+    let query = this.fireStore.collection("favDrinks").ref.where('userid' , '==',  userID);
+    query = query.where('drinkid' , '==',  drinkId);
+    query.get().then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        doc.ref.delete().then(function() {
+          this.snackBar.open('Drink successfully removed from favourites!', 'Close')}, () => this.snackBar.open('Drink unsuccessfully removed from favourites! ', 'Close'));
+      });
+    });
+  }
+
   getFavouriteDrinks(userID: string) : Observable<FavDrink[]>
   {
     return this.fireStore.collection<FavDrink>("favDrinks", ref => ref.where('userid', "==", userID)).valueChanges();

@@ -5,7 +5,7 @@
     <div class="container text-center">
       <h1 class="display-3 header">Meals For Every One</h1>
       <p class="welcome">
-        Hello! Do you want to feel new flavors? Improve your cooking skills or impress your friends? Here you will find fascinating recipes. See what we have prepared for you!</p>
+        Hello! Do you want to taste new flavors? Improve your cooking skills or impress your friends? Here you will find fascinating recipes. See what we have prepared for you!</p>
       <!--<p><a class="btn btn-primary btn-lg" routerLink="random-meal" role="button">See random meal &raquo;</a></p>-->
     </div>
   </div>
@@ -24,7 +24,7 @@
                   &raquo;</a></p>
               </div>
               <div class="col-md-5 randomPhoto">
-                <img class="randomMealPhoto" src="{{ meal.strMealThumb }}" alt="h4">
+                <img class="randomMealPhoto" style="cursor:pointer;" src="{{ meal.strMealThumb }}" [routerLink]="['/recipe', meal.idMeal]" alt="{{meal.strMeal}}">
               </div>
             </div>
           </div>
