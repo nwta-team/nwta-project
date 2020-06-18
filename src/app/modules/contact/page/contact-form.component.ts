@@ -7,14 +7,15 @@ import { FirestoreService } from 'src/app/data/service/firestore.service';
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styles: [],
+  styleUrls: ['./contact-form.component.scss'],
 })
-export class ContactFormComponent{
+export class ContactFormComponent {
 
   errorMessage: string;
   pageTitle = 'Log In';
 
-  constructor(private fireservice : FirestoreService) { }
+  constructor(private fireservice: FirestoreService) {
+  }
 
   signForNewsletter(newsletterForm: NgForm) {
     if (newsletterForm && newsletterForm.valid) {

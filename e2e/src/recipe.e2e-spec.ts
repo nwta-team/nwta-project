@@ -25,11 +25,6 @@ describe('Recipe', () => {
     expect(page.getMealInstructions()).toBeDefined();
   });
 
-    // niezrozumiały problem - wszystkie dane ok
-  // it('should display meal title', () => {
-   //  expect(page.getMealTitle()).toBe('Cajun spiced fish tacos');
-  // });
-
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);

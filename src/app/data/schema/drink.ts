@@ -54,9 +54,9 @@ export interface Drinks {
   drinks: Drink[];
 }
 
-export interface FavDrink{
+export interface FavDrink {
   userid: string;
   drinkid: string;
-  drinkname : string
+  drinkname: string
 }
 

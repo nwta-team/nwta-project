@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { environment } from '../../../../../environments/environment';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { from, Observable } from 'rxjs';
+import { from } from 'rxjs';
 
 describe('DrinkSubpageComponent', () => {
   let component: DrinkSubpageComponent;

@@ -1,11 +1,9 @@
-import { browser, by, element } from 'protractor';
+import { browser } from 'protractor';
 
 export class ProfilePage {
   navigateTo() {
     return browser.get('/profile');
   }
 
-  
 
-  
 }

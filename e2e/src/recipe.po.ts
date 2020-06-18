@@ -21,9 +21,4 @@ export class Recipe {
     return element(by.css('.allinstruction'));
   }
 
-   // opis w spec
-  // getMealTitle() {
-   // return element(by.id('.mealtitle')).getText();
-  // }
-
 }

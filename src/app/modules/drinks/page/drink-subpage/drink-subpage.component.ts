@@ -13,7 +13,7 @@ import { FirestoreService } from '../../../../data/service/firestore.service';
 export class DrinkSubpageComponent implements OnInit {
 
   drink: Drink;
-  currentUser : firebase.User;
+  currentUser: firebase.User;
 
   constructor(private coctailApiService: CoctailApiService, private route: ActivatedRoute,
               public auth: AuthService, private firestoreService: FirestoreService) {
@@ -21,7 +21,7 @@ export class DrinkSubpageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getDrink();
-    this.auth.getUserState().subscribe( user => {
+    this.auth.getUserState().subscribe(user => {
       this.currentUser = user;
     });
   }

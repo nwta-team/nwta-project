@@ -1,34 +1,45 @@
 <div class="container foods">
-<div role="main">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <div class="jumbotron">
-    <div class="container text-center">
-      <h1 class="display-3 header">Meals For Every One</h1>
-      <p class="welcome">
-        Hello! Do you want to taste new flavors? Improve your cooking skills or impress your friends? Here you will find fascinating recipes. See what we have prepared for you!</p>
-      <!--<p><a class="btn btn-primary btn-lg" routerLink="random-meal" role="button">See random meal &raquo;</a></p>-->
+  <div role="main">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1 class="display-3 header">Meals For Every One</h1>
+        <p class="welcome">
+          Hello! Do you want to taste new flavors? Improve your cooking skills or impress your friends? Here you will
+          find fascinating recipes. See what we have prepared for you!</p>
+      </div>
     </div>
-  </div>
 
-  <h3>Five Random Recipes!</h3>
-        <div class="row randomMeal" *ngFor="let meal of randomMeal">
-          <div class="col-md-12">
-            <hr class="featurette-divider">
-            <div class="row">
-              <div class="col-md-7">
-                <a href="{{ meal.idMeal }}"> </a>
-                <h2 class="featurette-heading">{{ meal.strMeal }} </h2>
-                <!--<p class="lead">here is our idea for a meal. what do you think about that? </p><-->
-                <p class="lead">do you want to see the recipe? click the button!</p>
-                <p class="recipe"><a class="btn btn-primary reciperouter btn-lg" [routerLink]="['/recipe', meal.idMeal]" role="button">Recipe
-                  &raquo;</a></p>
-              </div>
-              <div class="col-md-5 randomPhoto">
-                <img class="randomMealPhoto" style="cursor:pointer;" src="{{ meal.strMealThumb }}" [routerLink]="['/recipe', meal.idMeal]" alt="{{meal.strMeal}}">
-              </div>
-            </div>
+    <h3>Five Random Recipes!</h3>
+    <div class="text-center">
+      <button style="background-color: #269e4b" class="text-white" mat-raised-button (click)="refreshMeals()">Get Random
+        5 meals
+      </button>
+    </div>
+    <div class="row randomMeal" *ngFor="let meal of randomMeal">
+      <div class="col-md-12">
+        <hr class="featurette-divider">
+        <div class="row">
+          <div class="col-md-7">
+            <a href="{{ meal.idMeal }}"> </a>
+            <h2 class="featurette-heading">{{ meal.strMeal }} </h2>
+            <p class="lead">do you want to see the recipe? click the button!</p>
+            <p class="recipe"><a class="btn btn-primary reciperouter btn-lg" [routerLink]="['/recipe', meal.idMeal]"
+                                 role="button">Recipe
+              &raquo;</a></p>
+          </div>
+          <div class="col-md-5 randomPhoto">
+            <img class="randomMealPhoto" style="cursor:pointer;" src="{{ meal.strMealThumb }}"
+                 [routerLink]="['/recipe', meal.idMeal]" alt="{{meal.strMeal}}">
           </div>
         </div>
-     <hr class="featurette-divider">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="text-center">
+      <button style="background-color: #269e4b" class="text-white" mat-raised-button (click)="loadMoreMeals()">Get more
+        meals
+      </button>
     </div>
   </div>
+</div>

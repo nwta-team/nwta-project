@@ -13,13 +13,26 @@ export class FoodsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getFiveRandomMeals();
+  }
+
+  getFiveRandomMeals() {
+    for (let i = 0; i < 5; i++) {
+      this.getRandomMeal();
+    }
+  }
+
+  loadMoreMeals() {
     this.getRandomMeal();
   }
 
   getRandomMeal() {
-    for (let i = 0; i < 5; i++) {
-      this.mealApiService.getRandomMeal()
-        .subscribe(mealObj => this.randomMeal.push(mealObj.meals[0]));
-    }
+    this.mealApiService.getRandomMeal()
+      .subscribe(mealObj => this.randomMeal.push(mealObj.meals[0]));
+  }
+
+  refreshMeals() {
+    this.randomMeal = [];
+    this.getFiveRandomMeals();
   }
 }

@@ -5,12 +5,12 @@
       <h1 id="mealtitle">{{ meal?.strMeal }}</h1>
       <hr class="featurette-divider">
     </div>
-    <div class="col-md-7 photo">
-      <img clas="mealPhoto" src="{{ meal?.strMealThumb }}">
+    <div class="col-lg-7 photo">
+      <img class="mealPhoto" src="{{ meal?.strMealThumb }}">
     </div>
-    <div class="col-md-5 ingredient">
-      <h2>Igredients:</h2>
-      <div class="col-md-5 ingredients">
+    <div class="col-lg-5 ingredient">
+      <h2 class="pt-3">Igredients:</h2>
+      <div class="col-lg-12 ingredients">
         <p><span class="measure">{{ meal?.strMeasure1 }}</span><span
           class="ingredient">{{ meal?.strIngredient1 }} </span></p>
         <p><span class="measure">{{ meal?.strMeasure2 }} </span><span
@@ -62,12 +62,12 @@
     <div class="col-md-12 favorites">
       <p>Do you like this meal?
         <span
-        matTooltip="For this feature you need to be logged in"
-        [matTooltipDisabled]="this.currentUser">
+          matTooltip="For this feature you need to be logged in"
+          [matTooltipDisabled]="this.currentUser">
           <button
-          (click)="addMealToFavourites()"
-          class="btn btn-primary btn-danger"
-          [disabled]="this.currentUser == null">
+            (click)="addMealToFavourites()"
+            class="btn btn-primary btn-danger"
+            [disabled]="this.currentUser == null">
             Add to favorite!<span class="glyphicon glyphicon-heart"></span>
           </button></span></p>
       <hr class="end">

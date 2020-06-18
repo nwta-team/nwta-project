@@ -1,0 +1,7 @@
+@import 'src/styles-variables.scss';
+
+.container {
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    padding-top: 100px;
+  }
+}

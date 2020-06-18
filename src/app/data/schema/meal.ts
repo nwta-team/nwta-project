@@ -60,8 +60,8 @@ export interface Meals {
   meals: Meal[];
 }
 
-export interface FavMeal{
+export interface FavMeal {
   userid: string;
   mealid: string;
-  mealname : string
+  mealname: string
 }

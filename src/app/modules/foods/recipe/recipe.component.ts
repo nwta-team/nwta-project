@@ -11,19 +11,19 @@ import { AuthService } from 'src/app/data/service/auth.service';
   styleUrls: ['./recipe.component.scss']
 })
 export class RecipeComponent implements OnInit {
-  
+
   meal: Meal;
-  currentUser : firebase.User;
+  currentUser: firebase.User;
 
   constructor(private mealApiService: MealApiService, private route: ActivatedRoute,
-     private firestoreService: FirestoreService, public auth: AuthService) {
+              private firestoreService: FirestoreService, public auth: AuthService) {
   }
 
   ngOnInit(): void {
     this.getMeal();
-    this.auth.getUserState().subscribe( user => {
+    this.auth.getUserState().subscribe(user => {
       this.currentUser = user;
-    })
+    });
   }
 
   getMeal() {

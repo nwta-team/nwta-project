@@ -65,12 +65,14 @@
     </div>
   </div>
   <div class="row">
-    <div class="col text-center" matTooltip="For this feature you need to be logged in" [matTooltipDisabled]="this.currentUser">
+    <div class="col text-center" matTooltip="For this feature you need to be logged in"
+         [matTooltipDisabled]="this.currentUser">
       <button
-      mat-raised-button
-      (click)="addDrinkToFavourites()"
-      color="primary"
-      [disabled]="this.currentUser == null">Add to favourites</button>
+        mat-raised-button
+        (click)="addDrinkToFavourites()"
+        color="primary"
+        [disabled]="this.currentUser == null">Add to favourites
+      </button>
     </div>
   </div>
 </div>

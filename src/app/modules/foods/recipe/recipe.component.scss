@@ -4,8 +4,11 @@
   text-align: center;
   font-size: 25px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #cefc7899;
+  background: #ebebeb;
   margin-bottom: 50px;
+  -webkit-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+  -moz-box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
+  box-shadow: 3px 3px 30px 5px rgba(204, 204, 204, 0.9);
 }
 
 h1 {
@@ -65,6 +68,6 @@ img {
   color: white;
 }
 
-.favorites{
-  line-height:1.3;
+.favorites {
+  line-height: 1.3;
 }

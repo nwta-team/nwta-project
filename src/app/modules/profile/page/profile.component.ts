@@ -20,37 +20,33 @@ export class ProfileComponent implements OnInit {
   favDrinks: FavDrink [] = [];
 
 
-  ngOnInit(){
-    this.auth.getUserState().subscribe( user => {
+  ngOnInit() {
+    this.auth.getUserState().subscribe(user => {
       this.currentUser = user;
 
       this.firestoreService.getFavouriteMeals(this.currentUser.uid).subscribe(
         data => {
-          this.favMeals = data; 
+          this.favMeals = data;
         }
       );
 
       this.firestoreService.getFavouriteDrinks(this.currentUser.uid).subscribe(
         data => {
-          this.favDrinks = data; 
+          this.favDrinks = data;
         }
       );
-    })
+    });
   }
 
-  removeMealFromFavourites(mealid: string)
-  {
-    if(confirm('Are you sure you want to remove this meal from your favourites?'))
-    {
-      this.firestoreService.deleteMealFromFavourites(this.currentUser.uid, mealid)
+  removeMealFromFavourites(mealid: string) {
+    if (confirm('Are you sure you want to remove this meal from your favourites?')) {
+      this.firestoreService.deleteMealFromFavourites(this.currentUser.uid, mealid);
     }
   }
 
-  removeDrinkFromFavourites(drinkid: string)
-  {
-    if(confirm('Are you sure you want to remove this drink from your favourites?'))
-    {
-      this.firestoreService.deleteDrinkFromFavourites(this.currentUser.uid, drinkid)
+  removeDrinkFromFavourites(drinkid: string) {
+    if (confirm('Are you sure you want to remove this drink from your favourites?')) {
+      this.firestoreService.deleteDrinkFromFavourites(this.currentUser.uid, drinkid);
     }
   }
 
