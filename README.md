@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/nwta-team/nwta-project/workflows/Node.js%20CI/badge.svg)
+
 # nwta-project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
