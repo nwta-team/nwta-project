@@ -6,7 +6,7 @@ export class DrinksPage {
   }
 
   getDrinksLogo() {
-    return element(by.css('.drinkLogo'));
+    return element(by.css('.drinkLogoWrongElement'));
   }
 
   getTitleText() {
