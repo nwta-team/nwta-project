@@ -29,4 +29,4 @@ jobs:
     - run: npm run test -- --no-watch --no-progress
       env:
         CI: true
-    - run: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
+    - run: npm run e2e -- --protractor-config=e2e/protractor.conf.js
