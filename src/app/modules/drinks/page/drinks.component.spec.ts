@@ -1,16 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { DrinksComponent } from './drinks.component';
 
-describe('TabTwoComponent', () => {
+describe('DrinksComponent', () => {
   let component: DrinksComponent;
   let fixture: ComponentFixture<DrinksComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DrinksComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [DrinksComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
