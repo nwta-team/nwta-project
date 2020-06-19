@@ -1,8 +1,14 @@
 @import './app/layout/content-layout/content-layout.component.scss-theme';
 @import "./styles/themes/custom-theme";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 @include mat-core();
 

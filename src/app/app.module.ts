@@ -9,6 +9,7 @@ import { ContentLayoutComponent } from './layout/content-layout/content-layout.c
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,

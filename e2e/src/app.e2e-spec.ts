@@ -1,16 +1,15 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('Home page', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('nwta-project app is running!');
+  it('should display main page image', () => {
+    expect(page.getMainPageImage()).toBeDefined();
   });
 
   afterEach(async () => {

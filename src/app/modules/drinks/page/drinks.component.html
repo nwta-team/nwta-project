@@ -5,13 +5,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col text-center">
+    <div class="col title text-center">
       <h1>Coctails</h1>
     </div>
   </div>
   <hr>
   <div class="row">
-    <div class="col text-center">
+    <div class="col welcomeText text-center">
       <p>Welcome to the coctails tab! You can find here a lot of drinks and coctails
         from around the world. You can choose a specific one and get the ingredients
         along with the description how to make it. If you want to surprise yourself,
@@ -19,13 +19,23 @@
         no responsibility for actions taken.</p>
     </div>
   </div>
+  <div class="text-center">
+    <button style="background-color: brown" class="text-white" mat-raised-button (click)="refreshDrinks()">Get random 3
+      drinks
+    </button>
+  </div>
   <div class="row randomDrinks justify-content-center">
-    <div class="col-12 col-md-3 text-center" *ngFor="let drink of randomThreeDrinks">
+    <div class="col-12 col-md-4 text-center" *ngFor="let drink of randomThreeDrinks">
       <a [routerLink]="['/drink', drink.idDrink]">
       <img class="randomDrinkPic" src="{{ drink.strDrinkThumb }}" alt="random drink">
       </a>
       <p class="category">{{ drink.strCategory }}</p>
       <h2>{{ drink.strDrink }}</h2>
     </div>
+  </div>
+  <div class="text-center mb-4">
+    <button style="background-color: brown" class="text-white" mat-raised-button (click)="loadMoreDrinks()">Get more
+      drinks
+    </button>
   </div>
 </div>

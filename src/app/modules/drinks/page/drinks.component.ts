@@ -19,8 +19,22 @@ export class DrinksComponent implements OnInit {
   getRandomThreeDrinks() {
     for (let i = 0; i < 3; i++) {
       this.coctailApiService.getRandomDrink()
-        .subscribe(drinkObj => this.randomThreeDrinks.push(drinkObj.drinks[0]));
+        .subscribe(drinkObj => {
+          this.randomThreeDrinks.push(drinkObj.drinks[0]);
+        });
     }
   }
 
+  checkIfArrayContainsDrinks(drinkObj) {
+    return this.randomThreeDrinks.find(drinkElement => drinkElement.drinks[0].idDrink !== drinkObj.drinks[0].idDrink);
+  }
+
+  refreshDrinks() {
+    this.randomThreeDrinks = [];
+    this.getRandomThreeDrinks();
+  }
+
+  loadMoreDrinks() {
+    this.getRandomThreeDrinks();
+  }
 }

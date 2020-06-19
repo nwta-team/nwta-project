@@ -9,7 +9,7 @@ export class ContentLayoutComponent implements OnInit {
 
   navigation = [
     {link: '/home', title: 'Home'},
-    {link: '/foods', title: 'Foods'},
+    {link: '/foods', title: 'Meals'},
     {link: '/drinks', title: 'Drinks'},
     {link: '/contact', title: 'Contact'}
   ];

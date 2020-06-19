@@ -54,3 +54,9 @@ export interface Drinks {
   drinks: Drink[];
 }
 
+export interface FavDrink {
+  userid: string;
+  drinkid: string;
+  drinkname: string
+}
+
